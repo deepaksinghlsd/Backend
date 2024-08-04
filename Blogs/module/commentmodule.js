@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const CommentSchema = mongoose.Schema({
+const CommentSchema = new mongoose.Schema({
     post:{
         type:mongoose.Schema.ObjectId,
         ref:"Post",
@@ -15,3 +15,5 @@ const CommentSchema = mongoose.Schema({
     }
 
 })
+
+module.exports = mongoose.model("Comment", CommentSchema); 
