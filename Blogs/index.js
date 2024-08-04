@@ -12,7 +12,7 @@ connectDB();
 
 const router = require("./rought/blogs");
 
-// app.use("/app/v1/",router);
+app.use("/app/v1/",router);
 
 
 app.listen(PORT,()=>{
