@@ -7,7 +7,8 @@ app.use(express.json())
 const DBconnection = require("./config/database");
 DBconnection();
 
-const router = require("./router/router");const { default: mongoose } = require("mongoose");
+const router = require("./router/router");
+const { default: mongoose } = require("mongoose");
 app.use("/api/v1",router);
 app.listen(PORT, () => {
     console.log(`app is lisnig at port at ${PORT}`);
